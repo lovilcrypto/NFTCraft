@@ -1,0 +1,18 @@
+# scripts/reporting.py
+
+def generate_report(metadata_list):
+    """
+    Generate a report based on NFT metadata.
+    
+    :param metadata_list: List of metadata dictionaries
+    :return: Dictionary of report results
+    """
+    report = {
+        'total_nfts': len(metadata_list),
+        'unique_traits': len(set(item['traits'] for item in metadata_list))
+    }
+    return report
+
+# Example usage:
+# report = generate_report(metadata_list)
+# print(report)
